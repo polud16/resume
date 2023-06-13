@@ -15,10 +15,6 @@
     {{/with}}
 </div>
 
-<br>
-<hr>
-<br>
-
 <div>
     <h2>Education</h2>
     <ul>
@@ -44,42 +40,7 @@
 
     <div>
         <h3>Work Experience</h3>
-        <div>
-            <ul>
-                {{#each workExperience}}
-                <li><b>{{company}}</b></li>
-                <ul>
-                    <li>
-                        <div>
-                            <em>{{title}}</em>
-                        </div>
-                    </li>
-                    <li>
-                        ({{startDate}}) - ({{endDate}})
-                    </li>
 
-                    {{#each responsibilities}}
-                    <ul>
-                        <li>{{this}}</li>
-                    </ul>
-                    {{/each}}
-                </ul>
-        </div>
-
-        <br>
-        <br>
-        <hr>
-
-        <div>
-            <h4>
-                {{company}} {{industry}} ({{year_founded}})
-            </h4>
-        </div>
-        <hr>
-        <diV>
-            <ul>
-                {{#each employees}}
-                <div>
                     <b>{{name}}</b>
                     <li>
                         {{position}}
@@ -87,10 +48,7 @@
                     <li>
                         {{department}}
                     </li>
-                </div>
-                <br>
 
-                <div>
                     <ul>
                         {{#each projects}}
                         <b>{{name}}</b>
@@ -101,36 +59,6 @@
                             {{status}}
                         </li>
                         <br>
-                    </ul>
-                </div>
-        </diV>
-
-
-        <ul>
-            {{#each teams}}
-            <strong>{{team_name}}</strong>
-            {{#with team_leader}}
-            <li>
-                {{name}}
-            </li>
-            <li>
-                {{title}}
-            </li>
-            <li>
-                <a>{{email}}</a>
-            </li>
-            {{/with}}
-            <br>
-        </ul>
-
-
-
-        {{/each}}
-
-        {{/each}}
-
-
-
 
         </ul>
 
