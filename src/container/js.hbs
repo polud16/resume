@@ -1,0 +1,73 @@
+<main>
+    <div>
+        <h1>{{name}}</h1>
+        <strong>{{description}}</strong>
+    </div>
+    <div>
+        {{#with history}}
+        ({{year}})
+        <br>
+        {{founder}}
+        {{/with}}
+    </div>
+    <br>
+    <div>
+        <h2>Types</h2>
+        <ul>
+            {{#each types}}
+            <li>
+                <span class="badge text-bg-info">{{this}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h2>Features</h2>
+        <ul>
+            {{#each features}}
+            <li>
+                <span class="badge text-bg-secondary">{{this}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h2>Libraries</h2>
+        <ul>
+            {{#each libraries}}
+            <li>
+                <span class="badge text-bg-dark">{{this}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h2>Tools</h2>
+        <ul>
+            {{#each tools}}
+            <li>
+                <span class="badge text-bg-light">{{this}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h2>Community</h2>
+        <ul>
+            {{#each community}}
+            <li>
+                <button type="button" class="btn btn-link">{{name}}</button>
+                <b>({{type}})</b>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</main>
