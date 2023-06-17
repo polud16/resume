@@ -1,0 +1,139 @@
+<header>
+    <h1>{{name}}</h1>
+    <div>
+        <b>About:</b> <button type="button" class="btn btn-light">{{description}}</button>
+        <br>
+        <b>Price:</b> <button type="button" class="btn btn-secondary">{{price}}</button>
+        <br>
+        <b>Category:</b> <button type="button" class="btn btn-dark">{{category}}</button>
+    </div>
+</header>
+<hr>
+<main>
+    {{#with features}}
+    <div>
+        <h2>Features:(processor)</h2>
+        {{#with processor}}
+        <b>Brand:</b> {{brand}}
+        <br>
+        <b>Model:</b> {{model}}
+        <br>
+        <b>Speed:</b> {{speed}}
+        <br>
+        <b>Cores:</b> {{cores}}
+        <br>
+        <b>Cache:</b> {{cache}}
+        {{/with}}
+    </div>
+    <br>
+    <div>
+        <h3>(Memory)</h3>
+        {{#with memory}}
+        <b>Type:</b> {{type}}
+        <br>
+        <b>Size:</b> {{size}}
+        <br>
+        <b>Speed:</b> {{speed}}
+        {{/with}}
+    </div>
+    <br>
+    <div>
+        <h3>(Storage)</h3>
+        {{#with storage}}
+        <b>Type:</b> {{type}}
+        <br>
+        <b>Size:</b> {{size}}
+        {{/with}}
+    </div>
+    <br>
+    <div>
+        <h3>(Display)</h3>
+        {{#with display}}
+        <b>Size:</b> <span class="badge text-bg-info">{{size}}</span>
+        <br>
+        <b>Resolution:</b> <span class="badge text-bg-info">{{resolution}}</span>
+        <br>
+        <b>Technology:</b> <span class="badge text-bg-info">{{technology}}</span>
+        <br>
+        <b>Color_space:</b> <span class="badge text-bg-info">{{color_space}}</span>
+        <br>
+        <b>Brightness:</b> <span class="badge text-bg-info">{{brightness}}</span>
+        <br>
+        <b>Refresh_rate:</b> <span class="badge text-bg-info">{{refresh_rate}}</span>
+        {{/with}}
+    </div>
+    <br>
+    <div>
+        <h3>(Graphics)</h3>
+        {{#with graphics}}
+        <b>Brand:</b> <span class="badge text-bg-light">{{brand}}</span>
+        <br>
+        <b>Model:</b> <span class="badge text-bg-light">{{model}}</span>
+        <br>
+        <b>Memory:</b> <span class="badge text-bg-light">{{memory}}</span>
+        {{/with}}
+    </div>
+    <br>
+    <div>
+        <h3>Ports:</h3>
+        {{#each ports}}
+        <ul>
+            <li>
+                {{type}}
+            </li>
+            <li>
+                ({{count}})
+            </li>
+        </ul>
+        {{#each features}}
+        <ul>
+            <button type="button" class="btn btn-link">
+                <li>{{this}}</li>
+            </button>
+        </ul>
+        {{/each}}
+        {{/each}}
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h3>(Battery)</h3>
+        {{#with battery}}
+        <b>Type:</b> {{type}}
+        <br>
+        <b>Capacity:</b> {{capacity}}
+        <br>
+        <b>Life:</b> {{life}}
+        {{/with}}
+    </div>
+    <br>
+    <h3>Weight:</h3>({{weight}})
+    <br>
+    <br>
+    <div>
+        <h3>(Dimensions)</h3>
+        {{#with dimensions}}
+        <b>Height:</b> {{heigh}}
+        <br>
+        <b>Width:</b> {{width}}
+        <br>
+        <b>Depth:</b> {{depth}}
+        {{/with}}
+    </div>
+    <br>
+    <h3>Operating_system:</h3> ({{operating_system}})
+    <br>
+    <hr>
+    <div>
+        <h3>Accesseries:</h3>
+        <ul>
+            {{#each accessories}}
+            <li>
+                <button type="button" class="btn btn-primary">{{name}}</button>
+                <button type="button" class="btn btn-secondary">{{price}}</button>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/with}}
+</main>
