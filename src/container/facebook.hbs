@@ -1,0 +1,122 @@
+<header>
+    <h1>{{name}}</h1>
+</header>
+<main>
+    <div>
+        {{#each users}}
+        <ul>
+            <li>
+                <b>ID:</b><span class="badge text-bg-primary">{{id}}</span>
+            </li>
+            <li>
+                <span class="badge text-bg-secondary">{{name}}</span>
+            </li>
+            <li>
+                <span class="badge text-bg-info">{{gender}}</span>
+            </li>
+            <li>
+                <b>{{age}}</b>
+            </li>
+        </ul>
+        <br>
+        <hr>
+        <div>
+            <h3>Friends:</h3>
+            {{#each friends}}
+            <ul>
+                <li>
+                    <b>ID:</b><span class="badge text-bg-light">{{id}}</span>
+                </li>
+                <li>
+                    <span class="badge text-bg-secondary">{{name}}</span>
+                </li>
+                <li>
+                    <span class="badge text-bg-dark">{{gender}}</span>
+                </li>
+                <li>
+                    <b>{{age}}</b>
+                </li>
+            </ul>
+            <br>
+            <hr>
+            <div>
+                <h3>Mutual friends:</h3>
+                {{#each mutual_friends}}
+                <ul>
+                    <li>
+                        <b>ID:</b><span class="badge text-bg-dark">{{id}}</span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-secondary">{{name}}</span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-warning">{{gender}}</span>
+                    </li>
+                </ul>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h3>Groups:</h3>
+            {{#each groups}}
+            <ul>
+                <li>
+                    <b>ID:</b><span class="badge text-bg-danger">{{id}}</span>
+                </li>
+                <li>
+                    <b>Group name:</b> <span class="badge text-bg-secondary">{{name}}</span>
+                </li>
+                <li>
+                    ({{description}})
+                </li>
+            </ul>
+            <br>
+            <hr>
+            <div>
+                <h4>Groups members</h4>
+                {{#each members}}
+                <ul>
+                    <li>
+                        <b>ID:</b><span class="badge text-bg-light">{{id}}</span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-secondary">{{name}}</span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-dark">{{gender}}</span>
+                    </li>
+                    <li>
+                        <b>{{age}}</b>
+                    </li>
+                </ul>
+                {{/each}}
+
+            </div>
+            {{/each}}
+        </div>
+        <br>
+        <hr>
+        <div>
+            {{#each groups.members}}
+            <ul>
+                <li>
+                    <b>ID:</b><span class="badge text-bg-light">{{id}}</span>
+                </li>
+                <li>
+                    <span class="badge text-bg-light">{{name}}</span>
+                </li>
+                <li>
+                    <span class="badge text-bg-light">{{gender}}</span>
+                </li>
+                <li>
+                    <b>{{age}}</b>
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+</main>
