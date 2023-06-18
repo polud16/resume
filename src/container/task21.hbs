@@ -1,0 +1,147 @@
+<main>
+    <div class="card">
+        <div class="card-body">
+            {{#with heading}}
+            <div class="card">
+                <div class="card-body">
+                    {{#with main}}
+                    <div>
+                        <h1>{{title}}</h1>
+                    </div>
+                    <div>
+                        <p>{{text}}</p>
+                    </div>
+                    <div>
+                        {{#with button_text}}
+                        <div>
+                            <button class="btn btn-primary">{{solid}}</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="btn btn-outline-primary">{{outline}}</button>
+                        </div>
+                        {{/with}}
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    {{#with second}}
+                    <div>
+                        <h2>{{title}}</h2>
+                    </div>
+                    <div>
+                        <p>{{text}}</p>
+                    </div>
+                    <div>
+                        {{#with button_text}}
+                        <div>
+                            <button class="btn btn-secondary">{{solid}}</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="btn btn-outline-secondary">{{outline}}</button>
+                        </div>
+                        {{/with}}
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    {{#with subblock}}
+                    <div>
+                        <h3>{{title}}</h3>
+                    </div>
+                    <div>
+                        <p>{{text}}</p>
+                    </div>
+                    <div>
+                        {{#with button_text}}
+                        <div>
+                            <button class="btn btn-dark">{{solid}}</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="btn btn-outline-dark">{{outline}}</button>
+                        </div>
+                        {{/with}}
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            {{#with nested_display}}
+            <div class="display-1">{{title}}</div>
+            <div class="card">
+                <div class="card-body">
+                    {{#with children_display}}
+                    <div class="display-4">{{title}}</div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                    <div>
+                        {{#with button}}
+                        <button class="btn btn-warning">{{text}}</button>
+                        {{/with}}
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <div class="display-6">{{header_text}}</div>
+                    {{#with button}}
+                    <div>
+                        <button class="btn btn-info">{{text}}</button>
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+            {{/with}}
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    {{#with paragraph}}
+                    <div>
+                        <p class="text-uppercase">{{title}}</p>
+                    </div>
+                    <div>
+                        <p class="text-lowercase">{{text}}</p>
+                    </div>
+                    <div>
+                        {{#with button}}
+                        <div>
+                            <a href="{{url}}"><button class="btn btn-link">{{text}}</button></a>
+                        </div>
+                        {{/with}}
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="card-body">
+                            {{#each list_name}}
+                            <ul>
+                                <li>
+                                    <a href="{{url}}"><button class="btn btn-link">{{text}}</button></a>
+                                </li>
+                            </ul>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
