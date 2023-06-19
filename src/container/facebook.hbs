@@ -100,7 +100,42 @@
         <br>
         <hr>
         <div>
-            {{#each groups.members}}
+            {{#each groups}}
+            <ul>
+                <li>
+                    <b>ID:</b><span class="badge text-bg-light">{{id}}</span>
+                </li>
+                <li>
+                    <span class="badge text-bg-light">{{name}}</span>
+                </li>
+                <li>
+                    <span class="badge text-bg-light">{{description}}</span>
+                </li>
+                <li>
+            </ul>
+            <hr>
+            <div>
+                {{#each members}}
+                <ul>
+                    <li>
+                        <b>ID:</b><span class="badge text-bg-light">{{id}}</span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-light">{{name}}</span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-light">{{gender}}</span>
+                    </li>
+                    <li>
+                        <b>{{age}}</b>
+                    </li>
+                </ul>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+        <div>
+            {{#each members}}
             <ul>
                 <li>
                     <b>ID:</b><span class="badge text-bg-light">{{id}}</span>
