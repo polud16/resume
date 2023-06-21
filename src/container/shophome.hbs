@@ -1,0 +1,43 @@
+<main>
+    <div class="row">
+        <div class="col-12 mt-3 mb-5">
+            <div class="card">
+                <div class="nav nav-tabs">
+                    {{#each navigation.links}}
+                    <li class="nav-item">
+                        <a href="{{href}}" class="nav-link">{{text}}</a>
+                    </li>
+                    {{/each}}
+                    <div>
+                        <a href="#" class="nav-link disabled">Disable</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{#with newsBlock}}
+        <div>
+            <div class=" display-3 text-center">{{title}}</div>
+        </div>
+        {{/with}}
+        <section class="col-12 pt-3 pb-3">
+            <div class="row">
+                {{#each newsBlock.cards}}
+                <div class="col-4">
+                    <div class="card mb-3 text-bg-dark">
+                        <div class="card-header">
+                            <strong>{{title}}</strong>
+                            <span class="badge text-bg-success">{{isTop}}</span>
+                            <span class="badge text-bg-danger">{{isNew}}</span>
+                        </div>
+
+                        <div class="card-body">
+                            <p>{{description}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </section>
+    </div>
+
+</main>
