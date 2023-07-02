@@ -1,191 +1,205 @@
-<header>
+<header class="text-center">
     <h1>{{make}} {{model}}</h1>
     <strong>({{year}})</strong>
     <br>
     <strong>Color:{{color}}</strong>
 </header>
-<hr>
 <main>
     {{#with features}}
-    <div>
-        {{#with interior}}
-        <div>
-            {{#with seats}}
-            <h3>Seats</h3>
-            <b>Material:</b> {{material}}
-            <br>
-            <b>Color:</b> {{color}}
-            <br>
-            <b>Heated:</b> {{heated}}
-            <br>
-            <b>Ventilted:</b> {{> ventilated}}
-            {{/with}}
+    <div class="row">
+        <div class="col-6 mt-5">
+            {{#with interior}}
+            <div class="card">
+                <div class="card-body">
+                    {{#with seats}}
+                    <div class="display-6">Seats</div>
+                    <b>Material:</b> {{material}}
+                    <br>
+                    <b>Color:</b> {{color}}
+                    <br>
+                    <b>Heated:</b> {{heated}}
+                    <br>
+                    <b>Ventilted:</b> {{> ventilated}}
+                    {{/with}}
+                </div>
+            </div>
         </div>
-        <br>
-        <hr>
-        <div>
-            {{#with dashboard}}
-            <h3>Dashboard</h3>
-            <b>Material:</b> {{material}}
-            <br>
-            <b>Color:</b> {{color}}
-            <br>
-            <br>
-            <div>
-                {{#with display}}
-                <h4>(Display)</h4>
-                <b>Type:</b> {{type}}
-                <br>
-                <b>Size:</b> {{size}}
-                <br>
-                <b>Resolution:</b> {{resolution}}
-                <br>
-                <b>Touchscreen:</b> {{touchscreen}}
-                {{/with}}
+        <div class="col-6 mt-5">
+            <div class="card">
+                <div class="card-body">
+                    {{#with dashboard}}
+                    <div class="display-6">Dashboard</div>
+                    <b>Material:</b> {{material}}
+                    <br>
+                    <b>Color:</b> {{color}}
+                    <div class="mt-3">
+                        {{#with display}}
+                        <h4>(Display)</h4>
+                        <b>Type:</b> {{type}}
+                        <br>
+                        <b>Size:</b> {{size}}
+                        <br>
+                        <b>Resolution:</b> {{resolution}}
+                        <br>
+                        <b>Touchscreen:</b> {{touchscreen}}
+                        {{/with}}
+                    </div>
+                    {{/with}}
+                </div>
             </div>
             {{/with}}
         </div>
-        {{/with}}
-    </div>
-    <hr>
-    <br>
-    <div>
-        {{#with exterior}}
-
-        <div>
-            {{#with wheels}}
-            <h4>Wheels</h4>
-            <b>Size:</b> {{size}}
-            <br>
-            <b>Type:</b> {{type}}
-            <br>
-            <b>Color:</b> {{color}}
-            {{/with}}
+        <div class="col-6 mt-3 mb-3">
+            {{#with exterior}}
+            <div class="card">
+                <div class="card-body">
+                    {{#with wheels}}
+                    <div class="display-6">Wheels</div>
+                    <b>Size:</b> {{size}}
+                    <br>
+                    <b>Type:</b> {{type}}
+                    <br>
+                    <b>Color:</b> {{color}}
+                    {{/with}}
+                </div>
+            </div>
         </div>
-        <br>
-        <div>
-            {{#with headlights}}
-            <h4>Headlights</h4>
-            <b>Type:</b> {{type}}
-            <br>
-            <b>Brightness:</b> {{brightness}}
-            <br>
-            <b>Automatic:</b> {{automatic}}
-            {{/with}}
+        <div class="col-6 mt-3">
+            <div class="card">
+                <div class="card-body">
+                    {{#with headlights}}
+                    <div class="display-6">Headlights</div>
+                    <b>Type:</b> {{type}}
+                    <br>
+                    <b>Brightness:</b> {{brightness}}
+                    <br>
+                    <b>Automatic:</b> {{automatic}}
+                    {{/with}}
+                </div>
+            </div>
         </div>
-        <br>
-        <div>
-            {{#with sunroof}}
-            <h4>Wheels</h4>
-            <b>Size:</b> {{size}}
-            <br>
-            <b>Type:</b> {{type}}
-            <br>
-            <b>Automatic:</b> {{automatic}}
-            {{/with}}
-        </div>
-
-        {{/with}}
-    </div>
-    <br>
-    <hr>
-    <div>
-        {{#with safety}}
-        <div>
-            {{#with airbags}}
-            <h4>Airbags</h4>
-            <b>Front:</b> {{front}}
-            <br>
-            <b>Side:</b> {{side}}
-            <br>
-            <b>Knee:</b> {{knee}}
-            <br>
-            <b>Raer:</b> {{rear}}
-            {{/with}}
-        </div>
-        <br>
-        <div>
-            {{#with assistance}}
-            <h4>Assistance</h4>
-            <b>Blind_spot_monitoring:</b> <button type="button" class="btn btn-link">{{blind_spot_monitoring}}</button>
-            <br>
-            <b>Rear_cross_traffic_alert:</b> <button type="button"
-                class="btn btn-link">{{rear_cross_traffic_alert}}</button>
-            <br>
-            <b>Lane_departure_warning:</b> <button type="button"
-                class="btn btn-link">{{lane_departure_warning}}</button>
-            <br>
-            <b>Adaptive_cruise_control:</b> <button type="button"
-                class="btn btn-link">{{adaptive_cruise_control}}</button>
-            <br>
-            <b>Collision_warning:</b> <button type="button" class="btn btn-link">{{collision_warning}}</button>
-            {{/with}}
+        <div class="col-6 mt-3">
+            <div class="card">
+                <div class="card-body">
+                    {{#with sunroof}}
+                    <div class="display-6">Sunroof</div>
+                    <b>Size:</b> {{size}}
+                    <br>
+                    <b>Type:</b> {{type}}
+                    <br>
+                    <b>Automatic:</b> {{automatic}}
+                    {{/with}}
+                </div>
+            </div>
         </div>
         {{/with}}
+        <div class="col-6">
+            {{#with safety}}
+            <div class="card">
+                <div class="card-body">
+                    {{#with airbags}}
+                    <div class="display-6">Airbags</div>
+                    <b>Front:</b> {{front}}
+                    <br>
+                    <b>Side:</b> {{side}}
+                    <br>
+                    <b>Knee:</b> {{knee}}
+                    <br>
+                    <b>Raer:</b> {{rear}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    {{#with assistance}}
+                    <div class="display-6">Assistance</div>
+                    <b>Blind_spot_monitoring:</b> <button type="button"
+                        class="btn btn-link">{{blind_spot_monitoring}}</button>
+                    <br>
+                    <b>Rear_cross_traffic_alert:</b> <button type="button"
+                        class="btn btn-link">{{rear_cross_traffic_alert}}</button>
+                    <br>
+                    <b>Lane_departure_warning:</b> <button type="button"
+                        class="btn btn-link">{{lane_departure_warning}}</button>
+                    <br>
+                    <b>Adaptive_cruise_control:</b> <button type="button"
+                        class="btn btn-link">{{adaptive_cruise_control}}</button>
+                    <br>
+                    <b>Collision_warning:</b> <button type="button" class="btn btn-link">{{collision_warning}}</button>
+                    {{/with}}
+                </div>
+            </div>
+        </div>
     </div>
     {{/with}}
-    <br>
-    <hr>
-    <div>
-        {{#with engine}}
-        <h4>Engine</h4>
-        <b>Type:</b> {{type}}
-        <br>
-        <b>Displacement:</b> {{displacement}}
-        <br>
-        <b>Horsepower:</b> {{horsepower}}
-        <br>
-        <b>Torque:</b> {{torque}}
-        <br>
-        <div>
-            <br>
+    {{/with}}
+    <div class="col-12">
+        <div class="card mt-5">
+            <div class="card-body">
+                {{#with engine}}
+                <div class="display-6">Engine</div>
+                <b>Type:</b> {{type}}
+                <br>
+                <b>Displacement:</b> {{displacement}}
+                <br>
+                <b>Horsepower:</b> {{horsepower}}
+                <br>
+                <b>Torque:</b> {{torque}}
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
             {{#with transmission}}
-            <h5>Transmission</h5>
+            <div class="display-6">Transmission</div>
             <b>Type:</b> {{type}}
             <br>
             <b>Gears:</b> {{gears}}
             {{/with}}
         </div>
-        {{/with}}
     </div>
-    <br>
-    <hr>
-    <div>
-        {{#with fuel_economy}}
-        <h4>Fuel_economy</h4>
-        <b>City:</b> {{city}}
-        <br>
-        <b>Highway:</b> {{highway}}
-        <br>
-        <b>Combined:</b> {{combined}}
-        {{/with}}
-    </div>
-    <br>
-    <hr>
-    <div>
-        {{#with price}}
-        <h4>Price</h4>
-        <b>Base:</b> <button type="button" class="btn btn-light">{{base}}</button>
-        <br>
-        <b>Destination</b> <button type="button" class="btn btn-light">{{destination}}</button>
-        <br>
-        <br>
-        <div>
-            {{#with options}}
-            <h5>Options</h5>
-            <b>Navigation:</b> <button type="button" class="btn btn-light">{{navigation}}</button>
+    {{/with}}
+    <div class="card">
+        <div class="card-body">
+            {{#with fuel_economy}}
+            <div class="display-6">Fuel_economy</div>
+            <b>City:</b> {{city}}
             <br>
-            <b>Moonroof:</b> <button type="button" class="btn btn-light">{{moonroof}}</button>
+            <b>Highway:</b> {{highway}}
             <br>
-            <b>Premium_paint:</b> <button type="button" class="btn btn-light">{{premium_paint}}</button>
+            <b>Combined:</b> {{combined}}
             {{/with}}
         </div>
-        <br>
-        <hr>
-        <div>
-            <h6>Total:</h6>
-            <strong>{{total}}</strong>
+    </div>
+    <div class="card mt-5">
+        <div class="card-body">
+            {{#with price}}
+            <div class="display-6">Price</div>
+            <b>Base:</b> <button type="button" class="btn btn-light">{{base}}</button>
+            <br>
+            <b>Destination</b> <button type="button" class="btn btn-light">{{destination}}</button>
+            <br>
+            <br>
+            <div>
+                {{#with options}}
+                <div class="display-6">Options</div>
+                <b>Navigation:</b> <button type="button" class="btn btn-light">{{navigation}}</button>
+                <br>
+                <b>Moonroof:</b> <button type="button" class="btn btn-light">{{moonroof}}</button>
+                <br>
+                <b>Premium_paint:</b> <button type="button" class="btn btn-light">{{premium_paint}}</button>
+                {{/with}}
+            </div>
+            <br>
+            <hr>
+            <div class="text-end">
+                <div class="display-6">Total:</div>
+                <strong>{{total}}</strong>
+            </div>
+            {{/with}}
         </div>
-        {{/with}}
+    </div>
     </div>
 </main>

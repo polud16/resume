@@ -7,17 +7,15 @@
     {{#with main}}
     <main>
         <section>
-            <div>
+            <div class="text-center">
                 {{> title data="Work history"big=true}}
             </div>
             <div>
-                <ul>
+                {{#each works}}
 
-                    {{#each works}}
-                    <li>
-                        <div>{{position}}</div>
-
-                        <br>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="display-6">{{position}}</div>
 
                         <div>{{duration.from}} -
                             {{#if duration.to}}
@@ -27,56 +25,34 @@
                             {{/if}}
                         </div>
 
-                        <br>
-
                         <div>
                             {{#if company.url}}
                             {{else}}
                             <b>{{company.name}}</b>
                             {{/if}}
                         </div>
-
-                        {{!-- <div>
-                            {{> link text=company.name href=company.url blank=true noLine=true}}
-                        </div> --}}
-
-                        <br>
-                        <br>
-
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
                         <div>
                             <strong>Projects ({{projectAmount}})</strong>
                         </div>
-
-                        <br>
-
                         <ul>
                             {{#each projects}}
-
                             <li>
-
                                 {{> link text=name href=url blank=true noLine=true}}
-
-                                <br>
-
                                 <div>
                                     <p>({{about}})</p>
                                 </div>
-
-                                <br>
                                 <em><strong>Project stacks</strong></em>
                                 ({{stackAmount}})
-                                <br>
-
                                 <ul>
                                     {{#each stacks}}
                                     <li>{{name}}</li>
                                     {{/each}}
                                 </ul>
-
-                                <br>
                                 <em><strong>Project awards</strong></em>
-                                <br>
-
                                 <ul>
                                     {{#each awards}}
                                     <li>{{name}}</li>
@@ -84,13 +60,10 @@
                                 </ul>
                             </li>
                             {{/each}}
+                            {{/each}}
                         </ul>
-
-                    </li>
-                    <br>
-                    {{/each}}
-                </ul>
-
+                    </div>
+                </div>
             </div>
         </section>
     </main>
