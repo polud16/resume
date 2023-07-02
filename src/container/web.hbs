@@ -2,88 +2,74 @@
     {{#with web}}
     <div>
         {{#each languages}}
-        <ul>
-            <li>
-                <h1>{{name}}</h1>
-            </li>
-            <br>
-            <li>
-                {{version}}
-            </li>
-            ({{description}})
+        <ul class="mt-2 text-center">
+            <h1 class="display-3">{{name}}</h1>
+            <div>{{version}}</div>
+            <p>({{description}})</p>
         </ul>
-        <br>
-        <div>
-            {{#each elements}}
-            <div>
-                <ul>
-                    <li>
-                        <h2>({{name}})</h2>
-                    </li>
-                    <em>{{description}}</em>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    {{#each attributes}}
-                    <li>
-                        <strong>{{name}}</strong>
-                    </li>
-                    <em>{{description}}</em>
-                    <hr>
-                    <br>
-                    {{/each}}
-                </ul>
-            </div>
-            {{/each}}
-        </div>
-        <br>
-        <div>
-            {{#each properties}}
-            <div>
-                <ul>
-                    <li>
-                        <h3>({{name}})</h3>
-                    </li>
-                    <em>{{description}}</em>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    {{#each values}}
-                    <li>
-                        <strong>{{value}}</strong>
-                    </li>
-                    <em>{{description}}</em>
-                    {{/each}}
-                    <hr>
-                </ul>
-
-            </div>
-            {{/each}}
-        </div>
-        <div>
-            <ul>
-                {{#each functions}}
-                <div>
-                    <li>
-                        <h3>{{name}}</h3>
-                    </li>
-                    <em>{{descriprion}}</em>
+        <div class="card text-bg-dark mb-5">
+            <div class="card-body">
+                {{#each elements}}
+                <div class="card text-bg-dark">
+                    <div class="card-body">
+                        <div>
+                            <ul class="text-center">
+                                <h2>({{name}})</h2>
+                                <em>{{description}}</em>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <ul>
+                            {{#each attributes}}
+                            <li>
+                                <strong>{{name}}</strong>
+                            </li>
+                            <em>{{description}}</em>
+                            {{/each}}
+                        </ul>
+                    </div>
                 </div>
-                {{#each parameters}}
-                <ul>
-                    <li>
+                {{/each}}
+                <div>
+                    {{#each properties}}
+                    <div>
+                        <ul class="text-center">
+                            <h3>({{name}})</h3>
+                            <em>{{description}}</em>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            {{#each values}}
+                            <li>
+                                <strong>{{value}}</strong>
+                            </li>
+                            <em>{{description}}</em>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/each}}
+                </div>
+
+                <div>
+                    {{#each functions}}
+                    <div class="text-center">
+                        <h3>{{name}}</h3>
+                        <em>{{descriprion}}</em>
+                    </div>
+                    {{#each parameters}}
+                    <ul>
                         <h4>{{name}}</h4>
-                    </li>
-                    <li>
-                        {{type}}
-                    </li>
-                    <em>({{description}})</em>
-                </ul>
-                {{/each}}
-                {{/each}}
-            </ul>
+                        <li>
+                            {{type}}
+                        </li>
+                        <em>({{description}})</em>
+                    </ul>
+                    {{/each}}
+                    {{/each}}
+                </div>
+            </div>
         </div>
         {{/each}}
     </div>
